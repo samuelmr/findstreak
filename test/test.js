@@ -23,24 +23,26 @@ describe('Find Streak', function() {
       ];
       let rf = (a, b) => a + b.value;
       let highestTree = findStreak(arr, 3, rf);
-      assert.deepEqual([{"time":"03:00","value":9},{"time":"04:00","value":5},{"time":"05:00","value":4}], highestTree);
+      assert.deepEqual(highestTree, [{"time":"03:00","value":9},{"time":"04:00","value":5},{"time":"05:00","value":4}]);
       let highestFour = findStreak(arr, 4, rf);
-      assert.deepEqual([{"time":"00:00","value":7},{"time":"01:00","value":3},{"time":"02:00","value":1},{"time":"03:00","value":9}], highestFour);
+      assert.deepEqual(highestFour, [{"time":"00:00","value":7},{"time":"01:00","value":3},{"time":"02:00","value":1},{"time":"03:00","value":9}]);
     });
     it('should return find lowest item values', function() {
       let arr = [
-        {time: '00:00', value: 7},
+        {time: '00:00', value: 0},
         {time: '01:00', value: 3},
         {time: '02:00', value: 1},
         {time: '03:00', value: 9},
         {time: '04:00', value: 5},
-        {time: '05:00', value: 4},
+        {time: '05:00', value: 12},
         {time: '06:00', value: -2},
         {time: '07:00', value: -3}
       ];
       let rf = (a, b) => a + b.value;
       let lowestTwo = findStreak(arr, 2, rf, true);
-      assert.deepEqual([{"time":"06:00","value":-2},{"time":"07:00","value":-3}], lowestTwo);
+      assert.deepEqual(lowestTwo, [{"time":"06:00","value":-2},{"time":"07:00","value":-3}]);
+      let lowestThree = findStreak(arr, 3, rf, true);
+      assert.deepEqual(lowestThree, [{"time":"00:00","value":0},{"time":"01:00","value":3},{"time":"02:00","value":1}]);
     });
   });
 });
