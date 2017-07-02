@@ -7,11 +7,15 @@ In an array, find the N consecutive items whose combined value is highest. Or lo
 
 ## Examples:
 
+Simply get streak of three highest numbers:
+
     const findStreak = require('findstreak');
     let arr = [0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0];
     let n = 3;
     let rf = (a, b) => a + b;
     let newArr = findStreak(arr, n, rf); // [4, 5, 4]
+
+Get streaks of highest and lowest item values:
 
     const findStreak = require('findstreak');
     let arr = [
