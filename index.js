@@ -2,7 +2,7 @@ module.exports = function(a, n, cf, lo) {
   if (a.length < n) {
     return a;
   }
-  var currentArray = a.slice(0, n);;
+  var currentArray = a.slice(0, n);
   var currentValue = currentArray.reduce(cf, 0);
   for (let i=0; i<=a.length-n; i++) {
     let tmp = a.slice(i, i+n);
@@ -11,7 +11,7 @@ module.exports = function(a, n, cf, lo) {
       currentArray = tmp;
       currentValue = value;
     }
-    else if (value > currentValue) {
+    else if (!lo && value > currentValue) {
       currentArray = tmp;
       currentValue = value;
     }
