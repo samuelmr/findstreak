@@ -15,6 +15,10 @@
     "lowest"
   ],
   "author": "Samuel Rinnetmaki",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/samuelmr/findstreak.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "mocha": "^3.4.2",
