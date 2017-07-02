@@ -1,6 +1,6 @@
 {
   "name": "findstreak",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "In an array, find the N consecutive items whose combined value is highest. Or lowest.",
   "main": "index.js",
   "scripts": {
