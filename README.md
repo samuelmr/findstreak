@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/samuelmr/findstreak.svg?branch=master)](https://travis-ci.org/samuelmr/findstreak)
+
 # Find Streak
 
 In an array, find the N consecutive items whose combined value is highest. Or lowest.
